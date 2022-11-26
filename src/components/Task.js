@@ -1,5 +1,4 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
 
 export default function Task({ task: { id, title, state }, onArchiveTask, onPinTask }) {
   return (
@@ -29,6 +28,7 @@ export default function Task({ task: { id, title, state }, onArchiveTask, onPinT
           readOnly={true}
           name="title"
           placeholder="Input title"
+         style={{ background: 'red' }}
         />
       </label>
 
@@ -45,15 +45,4 @@ export default function Task({ task: { id, title, state }, onArchiveTask, onPinT
       )}
     </div>
   );
-}
-
-// proptypes in react: https://reactjs.org/docs/typechecking-with-proptypes.html
-Task.propTypes = {
-  task: PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    state: PropTypes.string.isRequired,
-  }),
-  onArchiveTask: PropTypes.func,
-  onPinTask: PropTypes.func,
 }
