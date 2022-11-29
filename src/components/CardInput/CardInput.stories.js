@@ -48,3 +48,11 @@ WithExceedingPatternMiddle.args = {
   pattern: '4-99-4-4',
   cardNumber: '0000111122223333',
 };
+
+export const AllNumbers = Template.bind({});
+AllNumbers.args = {
+  ...Default.args,
+  size: 10,
+  cardNumber: '0123456789',
+  pattern: '10'
+};

@@ -44,14 +44,14 @@ export default function CardInput({ size, cardNumber, pattern }) {
   };
 
   return (
-    <div className="flex gap-5">
+    <div className="flex gap-2">
       {splitCardNumberToPattern().map((item, index, arr) => {
         const previousLength = arr.slice(0, index).reduce((acc, val) => {
           return acc + val.length;
         }, 0);
 
         return (
-          <div key={index} className="flex gap-1">
+          <div key={index} className="flex gap-0">
             {item.map((digit, idx) => (
               <CardDigitInput
                 key={idx + previousLength}

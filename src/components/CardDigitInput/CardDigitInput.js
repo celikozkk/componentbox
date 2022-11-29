@@ -26,8 +26,14 @@ export default function CardDigitInput({ index, digit, onChange }) {
             e.target.select();
           });;
         }}
-        className="w-8 h-8 text-center border border-gray-300 rounded-md" 
-      />
+        className={[
+          "text-center", 
+          // "border", 
+          // "border-gray-300", 
+          // "rounded-md", 
+          "w-4 h-4 text-lg", // mobile
+          "sm:w-6 sm:h-6 sm:text-2xl", // tablet
+        ].join(' ')} />
     </div>
   );
 }
